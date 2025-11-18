@@ -37,6 +37,3 @@ On Error: A red error message will appear at the top, and the submission will be
 
 On Success: A green success message will appear, and the complete invoice object will be logged to the browser console.
 
-State Management: Reactive Forms (FormGroup, FormArray) for structured data handling.
-
-Styling: Tailwind CSS
