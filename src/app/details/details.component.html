@@ -1,0 +1,25 @@
+<div class="card shadow-sm p-4 my-3">
+  <h2 class="h4 fw-bold mb-4">Invoice Details</h2>
+  <div class="row row-gap-4">
+    <div class="col-md-6">
+      <label class="fw-bold mb-1" for="date">Invoice Date *</label>
+      <input id="date" class="form-control" type="date"
+            [ngModel]="invoiceDate" (ngModelChange)="invoiceDateChange.emit($event)">
+    </div>
+
+    <div class="col-md-6">
+      <label class="fw-bold mb-1" for="supplier">Supplier Name *</label>
+      <select class="form-select" id="supplier"
+              [ngModel]="supplierName" (ngModelChange)="supplierNameChange.emit($event)">
+        <option selected disabled value="">Select</option>
+        <option *ngFor="let sup of availableSuppliers" [value]="sup">{{ sup }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-12">
+      <label class="mb-1 fw-bold" for="notes">Notes</label>
+      <textarea class="form-control" rows="3" placeholder="Enter any additional notes" id="notes"
+                [ngModel]="notes" (ngModelChange)="notesChange.emit($event)"></textarea>
+    </div>
+  </div>
+</div>
